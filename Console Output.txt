@@ -1,0 +1,84 @@
+Started by user Fahad Charolia
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\MavenBuild
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\MavenBuild\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/anujdevopslearn/MavenBuild # timeout=10
+Fetching upstream changes from https://github.com/anujdevopslearn/MavenBuild
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.36.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/anujdevopslearn/MavenBuild +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision dd83d33cf3da714c9d636afcc8ad44efb6069551 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f dd83d33cf3da714c9d636afcc8ad44efb6069551 # timeout=10
+Commit message: "Update README.md"
+ > git.exe rev-list --no-walk dd83d33cf3da714c9d636afcc8ad44efb6069551 # timeout=10
+Parsing POMs
+Established TCP socket on 55616
+[MavenBuild] $ java -cp C:\ProgramData\Jenkins\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-agent-1.14.jar;C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven3\boot\plexus-classworlds-2.6.0.jar;C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven3/conf/logging jenkins.maven3.agent.Maven35Main C:\ProgramData\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven3 C:\ProgramData\Jenkins\war\WEB-INF\lib\remoting-3107.v665000b_51092.jar C:\ProgramData\Jenkins\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.14.jar C:\ProgramData\Jenkins\.jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.14.jar 55616
+<===[JENKINS REMOTING CAPACITY]===>   channel started
+Executing Maven:  -B -f C:\ProgramData\Jenkins\.jenkins\workspace\MavenBuild\pom.xml clean compile test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.java.example:java-example >--------------------
+[INFO] Building java-example 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ java-example ---
+[INFO] Deleting C:\ProgramData\Jenkins\.jenkins\workspace\MavenBuild\target
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ java-example ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\MavenBuild\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ java-example ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\ProgramData\Jenkins\.jenkins\workspace\MavenBuild\target\classes
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ java-example ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\MavenBuild\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ java-example ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\ProgramData\Jenkins\.jenkins\workspace\MavenBuild\target\classes
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ java-example ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\MavenBuild\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ java-example ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\ProgramData\Jenkins\.jenkins\workspace\MavenBuild\target\test-classes
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ java-example ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.geekcap.vmturbo.ThingTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.118 s - in com.geekcap.vmturbo.ThingTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[JENKINS] Recording test results
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.675 s
+[INFO] Finished at: 2023-04-14T12:43:00+05:30
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving C:\ProgramData\Jenkins\.jenkins\workspace\MavenBuild\pom.xml to com.java.example/java-example/1.0-SNAPSHOT/java-example-1.0-SNAPSHOT.pom
+channel stopped
+Finished: SUCCESS
